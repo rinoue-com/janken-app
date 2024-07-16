@@ -9,7 +9,7 @@
 
 ## ③DEMO
 
-
+https://tech-ryu.sakura.ne.jp/janken-app/
 
 ## ④作ったアプリケーション用のIDまたはPasswordがある場合
 
