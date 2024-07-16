@@ -1,0 +1,184 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-size: 32px;
+}
+
+h1 {
+    margin: 20px 0;
+}
+
+header {
+    background-color: #fff;
+    /* border-bottom: 1px solid #ccc; */
+    text-align: center;
+}
+
+main {
+    border-bottom: 1px solid #ccc;
+}
+
+footer {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+p {
+    font-size: 200%;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+    height: 200px;
+}
+
+ul {
+    padding: 0;
+    border-top: 1px solid #000000;
+    display: table;
+    /* 定義 */
+    table-layout: fixed;
+    width: 100%;
+}
+
+li {
+    text-align: center;
+    list-style-type: none;
+    border: 1px solid #666;
+    background-color: #FFF;
+    display: table-cell;
+    /* 定義 */
+    cursor: pointer;
+    padding: 10px;
+}
+
+li:hover {
+    background: #0066CC;
+    color: #fff;
+}
+
+li img {
+    max-width: 100%;
+    height: auto;
+    min-height: 10px;
+    max-height: 250px;
+}
+
+#pc_hands_img img {
+    max-width: 80%;
+    height: auto;
+    min-height: 10px;
+    max-height: 350px;
+}
+
+/* ポップアップ画面 */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: white;
+    color: black;
+    margin: 5%;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#pc_hands_img {
+    margin: 10px;
+}
+
+.close-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* 勝ち負け */
+.effect {
+    width: 90%;
+    height: auto;
+    display: none;
+    margin: 20px auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: growAndFadeIn 2s forwards;
+    /* 1番全面に */
+    z-index: 1000;
+}
+#win-effect img,
+#lose-effect img {
+    width: 100%;
+    height: 100%;
+}
+@keyframes growAndFadeIn {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.score {
+    padding: 0 50px;
+    margin-bottom: 30px;
+}
+
+.score p,span {
+    text-align: left;
+    font-size: 32px;
+    margin: 0;
+    height: auto;
+}
+
+h3 {
+    font-size: 36px;
+    margin: 10px;
+}
+
+#best-score {
+    font-size: 24px;
+    margin: 10px;
+    color: red;
+    display: none;
+}
+
+/* 点滅 */
+.blinking{
+	-webkit-animation:blink 1.5s ease-in-out infinite alternate;
+    -moz-animation:blink 1.5s ease-in-out infinite alternate;
+    animation:blink 1.5s ease-in-out infinite alternate;
+}
+@-webkit-keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@-moz-keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
